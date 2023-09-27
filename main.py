@@ -76,7 +76,8 @@ async def set_timer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         message_text = context.args[0]
         # args[1] should contain the number of days
         # args[2] should contain the time in 24-hour format (e.g., 22:00 for 10:00 PM)
-        due = int(context.args[1]) * 60 * 60 * 24 + 60 * 60 * 2
+        # due = int(context.args[1]) * 60 * 60 * 24 + 60 * 60 * 2
+        due = int(context.args[1])
 
         if due  < 0:
             await update.effective_message.reply_text("Sorry we can not go back to future!")

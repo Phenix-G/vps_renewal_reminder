@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mybot:
+    restart: always
+    build: .
+    command: python main.py
+    volumes:
+      - /workspaces/vps_renewal_reminder:/bot
+    environment:
+      - BOT_TOKEN=63xxxxg
+      - CHAT_ID=xxxx
+
